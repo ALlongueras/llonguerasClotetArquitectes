@@ -31,12 +31,14 @@
             {
                 <h4>@Model.localitzacioProjecte</h4>
             }
-            if (Model.clientProjecte != null)
+            if (Current.GetPropertyValue("clientProjecte")!="")
             {
                 <h5>@Dictionary.client @Model.clientProjecte</h5>
             }
         }
-        <p>@Model.descripcio</p>
+        <div class="genericDescription">
+            <p>@Model.descripcio</p>
+          </div>
     </div>
     <div class="contenidorImatges">
         @{

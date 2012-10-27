@@ -1,10 +1,16 @@
 @font-face {
-    font-family: Average;
-    src: url('/font/Average/Average-Regular.ttf');
+    font-family: Numans;
+    src: url('/font/Numans/Numans-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: Source_Sans_Pro;
+    src: url('/font/Source_Sans_Pro/SourceSansPro-Regular.ttf');
     font-weight: 400;
 }
 
-body li { font-family: Average; }
+
+body li { font-family: Numans; }
 
 #central {
     height: auto;
@@ -41,26 +47,30 @@ body li { font-family: Average; }
     float: right;
     margin-right: 10px;
 }
-
-#central .menu {
+#central .menu,#central .menuProjectes {
     clear: both;
-    font-family: Average, Verdana, serif;
+}
+#central .menu h2{
+    /*font-family: Numans, Verdana, serif;*/
     font-size: 11px;
     position: relative;
     right: -10px;
     top: 11px;
     top: 0px\9;
+    font-weight: normal;
+    -webkit-margin-before: 0em;
 }
 
-#central .menuProjectes {
-    clear: both;
+#central .menuProjectes h3 {
     float: right;
-    font-family: Verdana, serif;
+    /*font-family: Verdana, serif;*/
     font-size: 10px;
     position: relative;
     right: -10px;
     top: 17px;
     top: 4px\9;
+    font-weight: normal;
+    -webkit-margin-before: 0em;
 }
 
 li { list-style: none; }
@@ -129,7 +139,7 @@ a:hover img { color: white; }
 #central .projecte {
     color: gray;
     display: block;
-    font-family: Verdana, serif;
+    /*font-family: Verdana, serif;*/
     font-size: 13px;
     list-style: none;
     margin: 0px;
@@ -168,7 +178,7 @@ a:hover img { color: white; }
 .expo {
     color: gray;
     float: left;
-    font-family: Verdana, serif;
+    /*font-family: Verdana, serif;*/
     font-size: 13px;
     height: auto;
     margin-bottom: 50px;
@@ -182,7 +192,7 @@ a:hover img { color: white; }
 .premis {
     color: gray;
     float: right;
-    font-family: Verdana, serif;
+    /*font-family: Verdana, serif;*/
     font-size: 13px;
     height: auto;
     margin-bottom: 50px;
@@ -219,7 +229,7 @@ a:hover img { color: white; }
 
 #central .columna {
     float: left;
-    font-family: Verdana;
+    /*font-family: Verdana;*/
     font-size: 13px;
     position: relative;
     text-align: justify;
@@ -228,7 +238,7 @@ a:hover img { color: white; }
 
 #central .columna2 {
     float: left;
-    font-family: Verdana;
+    /*font-family: Verdana;*/
     font-size: 13px;
     left: 15px;
     position: relative;
@@ -238,7 +248,7 @@ a:hover img { color: white; }
 
 #central .columna3 {
     float: left;
-    font-family: Verdana;
+    /*font-family: Verdana;*/
     font-size: 13px;
     left: 32px;
     position: relative;

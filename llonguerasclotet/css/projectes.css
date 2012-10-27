@@ -104,10 +104,15 @@
   top: 15px;
   margin-top: 15px;
   margin-left: 10px;
-  font-family: Average;
+  font-family: Source_Sans_Pro;
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   text-align: justify;
+}
+.descripcioProjecte .genericDescription {
+    overflow-y: auto;
+    height: 247px;
+    padding-right: 3px;
 }
 
 /*Estils del text*/
@@ -115,13 +120,13 @@
     font-size: 13px;
 }
 .descripcioProjecte h2 {
-    font-size: 12px;
+    font-size: 13px;
 }
 .descripcioProjecte h3 {
-    font-size: 11px;
+    font-size: 13px;
 }
 .descripcioProjecte h4, .descripcioProjecte h5{
-    font-size: 10px;
+    font-size: 13px;
 }
 .descripcioProjecte p, .descripcioProjecte h1, .descripcioProjecte h2, .descripcioProjecte h3, .descripcioProjecte h4, .descripcioProjecte h5 {
     margin-top: 0px;
