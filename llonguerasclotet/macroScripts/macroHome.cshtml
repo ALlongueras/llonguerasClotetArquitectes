@@ -18,7 +18,7 @@
                     {
                         <h2>@imatge.GetProperty("subtitolImatge").Value</h2>
                     }*@
-                <a href="@Model.NodeById(@imatge.linkImatge).Url" title="paco">
+                <a href="@Model.NodeById(@imatge.linkImatge).Url">
                     <img src="@imatge.imatgeSlide.mediaItem[0].Image.umbracoFile" alt="@imatge.titolImatge @Dictionary.keywords"/>
                 </a>
             }
