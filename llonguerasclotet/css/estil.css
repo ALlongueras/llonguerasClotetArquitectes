@@ -41,19 +41,21 @@ body li { font-family: Average; }
     float: right;
     margin-right: 10px;
 }
-
-#central .menu {
+#central .menu,#central .menuProjectes {
     clear: both;
+}
+#central .menu h2{
     font-family: Average, Verdana, serif;
     font-size: 11px;
     position: relative;
     right: -10px;
     top: 11px;
     top: 0px\9;
+    font-weight: normal;
+    -webkit-margin-before: 0em;
 }
 
-#central .menuProjectes {
-    clear: both;
+#central .menuProjectes h3 {
     float: right;
     font-family: Verdana, serif;
     font-size: 10px;
@@ -61,6 +63,8 @@ body li { font-family: Average; }
     right: -10px;
     top: 17px;
     top: 4px\9;
+    font-weight: normal;
+    -webkit-margin-before: 0em;
 }
 
 li { list-style: none; }
