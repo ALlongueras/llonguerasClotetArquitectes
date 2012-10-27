@@ -1,0 +1,11 @@
+@{
+    string defaultTitle = !string.IsNullOrEmpty(Model.title) ? Model.title : Dictionary.defaultTitle;
+    string defaultDescription = !string.IsNullOrEmpty(Model.description) ? Model.description : Dictionary.defaultDescription;
+    string defaultKeywords = !string.IsNullOrEmpty(Model.keywords) ? Model.keywords : Dictionary.defaultKeywords;
+    string defaultRobots = Model.noIndexPage ? "noindex,nofollow" : "index, follow";
+}
+<title>@defaultTitle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" content="@defaultDescription" />
+<meta name="keywords" content="@defaultKeywords" />
+<meta name="robots" content="@defaultRobots">

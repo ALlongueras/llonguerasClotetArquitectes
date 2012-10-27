@@ -1,0 +1,95 @@
+﻿a {
+   text-decoration: none;
+}
+
+/* CONTENEDOR DE LAS MINIATURAS */
+.container {
+	position: relative;
+	top: -103px;
+	left: -5px;
+	height: 200px;
+   width: 250px;
+   padding: 1em 1em 1em 1em;
+   text-align: right;
+//  background-color: #0fffe0;
+}
+.petites{
+	position: relative;
+	float: left;
+	height: 90px;
+}
+
+.container p {
+	color: #fc7;
+	font-family: "Andale mono", "Trebuchet MS", sans-serif;
+	font-size: 12px;
+	//border-bottom: 1px dashed #666;
+}
+
+/* Propiedades de las miniaturas */
+.thumb img {
+        /*border: 2px solid #ffffff;*/
+        margin: 0 3px 5px 3px;
+}
+
+/* Para que no se vean las imágenes hasta que se haga mouse over sobre las miniaturas */
+.thumb span {
+	position: absolute;
+	top: 250px;
+	left: -1000px;
+    visibility: hidden;
+	color: #fc7;
+	text-align: right;
+	font-family: "Andale mono", "Trebuchet MS", sans-serif;
+	font-size: 14px;  
+}
+
+/* Estilo de la capa que se ve cuando se pasa el ratón por una miniatura */
+.thumb:hover span {
+	//background-color: #333;
+	position: absolute;
+   visibility: visible;
+	top:  -357px;
+	right: -1920px; 
+	width: 700px;
+	//left: 350px;
+	z-index: 1;
+	//margin right: auto;
+	margin: 0 auto;
+}
+
+
+/* Estilo de las imágenes que se muestran al hacer el mouse over */
+.thumb span img{ 
+	/*border: 0px solid #000;
+	padding: 5px 5px 5px 5px;
+	background-color: #FFFFFf;*/
+}
+/* Para que no se vean las imágenes hasta que se haga mouse over sobre las miniaturas */
+#central .thumb .pre 
+{
+    visibility: hidden;
+	/*position: absolute;
+	top: 250px;
+	left: -1000px;
+   	
+	color: #fc7;
+	text-align: right;
+	font-family: "Andale mono", "Trebuchet MS", sans-serif;
+	font-size: 14px;
+	//border-bottom: 2px dashed #666;*/
+   
+}
+/* Estilo de la capa que se ve cuando se pasa el ratón por una miniatura */
+#central .thumb:hover .pre {
+	position: absolute;
+   	visibility: visible;
+	top:  125px;
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+	left: 0px;
+	/*width: 700px;*/
+	z-index: 1;
+	/*margin: 0 auto;*/
+}

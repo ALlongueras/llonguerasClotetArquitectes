@@ -1,0 +1,20 @@
+﻿@using umbraco
+@using umbraco.MacroEngines;
+
+
+@{
+    <div class="cos_central" id="estudi">
+            <img src="@Model.imatge.mediaItem[0].Image.umbracoFile" id="imatge_estudi" class="imatge_estudi" alt="Estudi" />
+        <div class="curriculum">
+          <div class="columna"><span style="font-weight:bold;">@Model.titulPrimeraColumna</span><br><br>
+                @Model.contingutPrimeraColumna.ToString()
+                </div>
+          <div class="columna2"><span style="font-weight:bold;">@Model.titulSegonaColumna</span><br><br>
+                @Model.contingutSegonaColumna.ToString()
+                </div>
+          <div class="columna3"><span style="font-weight:bold;">@Model.titulTerceraColumna</span><br><br>
+                @Model.contingutTerceraColumna.ToString()
+                </div>
+        </div>
+    </div>
+}

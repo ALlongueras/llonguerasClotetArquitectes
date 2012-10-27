@@ -1,0 +1,14 @@
+﻿#slideshow {
+    margin-top: 20px;
+}
+#slideshow h1, #slideshow h2 {
+    font-family: Average;
+    font-size: 12px;
+    font-weight: normal;
+}
+#slideshow h1 {
+    float: left;
+}
+#slideshow h2 {
+    float: right;
+}

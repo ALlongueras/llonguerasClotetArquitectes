@@ -1,0 +1,70 @@
+﻿@{
+    dynamic posicio = @Model.AncestorOrSelf("master");
+    dynamic tematica = @Model.AncestorOrSelf("home");
+}
+@{
+    if (Model.NodeTypeAlias == "master")
+    {
+        HttpContext.Current.Response.Redirect(Model.Children[0].Url);
+    }
+}
+
+
+<div id="central">
+    <div class="header">
+        <div class="logo">
+            <a href="@tematica.Url" >
+                <img src="@posicio.logo.mediaItem[0].Image.umbracoFile" alt="Llongueras Clotet @Dictionary.keywords" />
+            </a>
+        </div>
+
+        <ul class="idioma">
+            @{
+                dynamic myIdiom = Model.AncestorOrSelf("home");
+                dynamic webSite = Model.Ancestors("master");
+                dynamic homeList = webSite[0].Descendants("home");
+                if (!homeList.IsNull() && homeList.Count() > 0)
+                {
+                    foreach (dynamic home in homeList)
+                    {
+                        string redirect = @home.Url;
+                        <li class="@(home.IsFirst() ? "first" : "none")">
+                            <a href="@redirect" title="@home.nomIdioma" class="@(home.Id == myIdiom.Id ? "seleccionat" : "")">
+                                @home.nomIdioma.ToUpper()
+                            </a>
+                        </li>
+                    }
+                }
+            }
+        </ul>
+
+        <ul class="menu">
+            @foreach (dynamic item in @tematica.Descendants(2).Take(2))
+            {
+                string name = @item.NodeTypeAlias()=="estudi" ? @Dictionary.estudi : @Dictionary.publicacionsPremis;
+                <li>
+                    <a class="@(item.Id==Model.Id?"seleccionat":"")" href="@item.Url">@name.ToUpper()</a>
+                </li>
+            }    
+        </ul>
+
+        <ul class="menuProjectes">
+            @foreach (dynamic item in @tematica.Descendants("tematica").OrderBy("id descending"))
+            {
+                if (string.Compare(@item.NodeTypeAlias, "Tematica") != 0 && !item.notItemMenu)
+                {
+                    foreach (dynamic node in @item.Descendants("Projectes").Take(1))
+                    {
+                        <li>
+                            <a class="@(node.Id==Model.Id?"seleccionat":"")" href="@node.Url">@item.Name.ToUpper()</a>
+                        </li>
+                    }
+                }
+            }
+        </ul>
+        
+        <div class="linea">
+            <img src="@posicio.linea.mediaItem[0].Image.umbracoFile" alt="@Dictionary.keywords" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/base.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="macroCentral" runat="server">
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="macroCentral2" runat="server">
+
+</asp:content>
+    
+
+<asp:content ContentPlaceHolderId="body_content" runat="server">
+  <h1>PÀGINA NO DISPONIBLE, PERDONEU LES MOLÈSTIES</h1>
+  <img src="http://llonguerasclotet.cat/media/16242/portada7.jpg" alt="llongueras clotet arquitectes">
+</asp:content>
+  

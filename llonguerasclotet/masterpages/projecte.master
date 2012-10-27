@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/base.master" AutoEventWireup="true" %>
+
+ 
+  
+<asp:Content ContentPlaceHolderId="macroCentral" runat="server">
+  <!-- Insert "macroCentral" markup here -->
+  <umbraco:Macro Alias="macroMenuProjectes" runat="server"></umbraco:Macro>
+</asp:Content>
+  
+  
+<asp:Content ContentPlaceHolderId="macroCentral2" runat="server">
+  <!-- Insert "macroCentral2" markup here -->
+  <umbraco:Macro Alias="macroDetallProjecte" runat="server" />
+</asp:Content>

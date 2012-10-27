@@ -1,0 +1,107 @@
+﻿@*
+Este script Razor crea un sitemap XML usado por los motores de búsqueda. 
+Más información en http://www.sitemaps.org
+Parámetros
+    MaxLevelForSitemap (int, opcional, valor por defecto 4)
+*@
+
+@using System.Text
+@using System.Web.Caching
+@using System.Xml
+@using umbraco.MacroEngines
+@inherits DynamicNodeContext
+@{
+    string xml;
+
+    var cache = Cache["SitemapXml"] as string;
+    if (cache == null)
+    {
+        // Si no existe, generamos uno nuevo y lo guardamos en la cache por 8 horas
+        xml = GenerateXml();
+        Cache.Add("SitemapXml", xml, null, DateTime.Now.AddHours(8), Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+    }
+    else
+    {
+        xml = cache;
+    }
+
+    // Cambia el mimetype
+    Context.Response.ContentType = "text/xml";
+    Context.Response.Write(xml);
+}
+
+@functions 
+{
+    string GenerateXml()
+    {
+        // Nodo raiz
+        var root = @Model.AncestorOrSelf();
+
+        // Parámetro pasado por el macro. Si no ha sido especificado, poner valor 4
+        var maxLevel = string.IsNullOrEmpty(Parameter.MaxLevelForSitemap) ? 4 : int.Parse(Parameter.MaxLevelForSitemap);
+
+        // Guardemos el contenido en un MemoryStream. 
+        // Podríamos usar un StringWriter pero estaría en UTF-16 encoding
+        using (var ms = new MemoryStream())
+        {
+            // Asegurarse que el xml es UTF8 y está indentado
+            using (var writer = new XmlTextWriter(ms, Encoding.UTF8) { Formatting = Formatting.Indented })
+            {
+                // Escribir <?xml version="1.0" encoding="utf-8"?>
+                writer.WriteStartDocument();
+
+                // Escribir el xml
+                writer.WriteStartElement("urlset");
+                writer.WriteAttributeString("xmlns", "http://www.sitemaps.org/schemas/sitemap/0.9");
+
+                // Hacer un bucle sobre los nodos hijos 
+                GenerateInternal(root, maxLevel, writer);
+
+                // Finalizar con el xml
+                writer.WriteEndElement();
+            }
+
+            return Encoding.UTF8.GetString(ms.ToArray());
+        }
+    }
+
+    void GenerateInternal(dynamic parent, int maxLevel, XmlTextWriter writer)
+    {
+        WriteItem(parent, writer);
+        if (parent.Level <= maxLevel)
+        foreach (var child in parent.Children)
+        {
+            GenerateInternal(child, maxLevel, writer);
+        }
+    }
+
+    void WriteItem(dynamic item, XmlTextWriter writer)
+    {
+        // Filtra las páginas con la propiedad "umbracoNaviHide" en 'true'
+        if (!item.Visible || item.isVisibleSiteMapXML==false)
+        {
+            return;
+        }
+
+        writer.WriteStartElement("url");
+
+        // Url completa incluyendo el host
+        var url = new UriBuilder("http", Context.Request.ServerVariables["HTTP_HOST"]) {Path = item.Url};
+
+        writer.WriteElementString("loc", url.ToString());
+        writer.WriteElementString("lastmod", item.UpdateDate.ToUniversalTime().ToString("yyyy-MM-dd"));
+
+        // Escribe el 'changeFreq' y 'priority' si están en la página
+        if (item.HasValue("changeFreq"))
+        {
+            writer.WriteElementString("changefreq", item.ChangeFreq);
+        }
+
+        if (item.HasValue("priority"))
+        {
+            writer.WriteElementString("priority", item.Priority);
+        }
+
+        writer.WriteEndElement();
+    }
+}

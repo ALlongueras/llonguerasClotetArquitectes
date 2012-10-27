@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/master.master" AutoEventWireup="true" %>
+
+
+<asp:Content ContentPlaceHolderId="mainContent" runat="server">
+  <!-- Insert "mainContent" markup here -->
+  <!-- Macro Header -->
+  
+                <umbraco:Macro Alias="Master" runat="server"></umbraco:Macro>
+  
+                <!-- Macro Central--> 
+   
+                <asp:ContentPlaceHolder Id="macroCentral" runat="server">
+                    <!-- Insert default "macroCentral" markup here -->
+                    <umbraco:Item field="macroCentral" runat="server" />
+                </asp:ContentPlaceHolder>
+
+    
+                <!-- Macro Central 2-->
+   
+                <asp:ContentPlaceHolder Id="macroCentral2" runat="server">
+                    <!-- Insert default "macroCentral2" markup here -->
+                    <umbraco:Item field="macro_central2" runat="server" />
+                </asp:ContentPlaceHolder>
+
+  
+   
+                <asp:ContentPlaceHolder Id="body_content" runat="server">
+  
+                </asp:ContentPlaceHolder>
+</asp:Content>
+  

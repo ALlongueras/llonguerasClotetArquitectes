@@ -1,0 +1,21 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+
+<div id="menuProjectes">
+    <ul class="petites">
+        @foreach (dynamic item in @Model.Parent.Children)
+        {
+            if (item.HasValue("imatgePetitaMenuProjectes"))
+            {
+                <li>
+                    <a data-id="@item.Id" href="@item.NiceUrl"><img src="@item.imatgePetitaMenuProjectes.mediaItem[0].Image.umbracoFile" height="95" alt="@item.Name"/></a>
+                </li>
+            }
+            if (item.HasValue("imatgePrevia"))
+            {
+                <li class="@item.Id hide">
+                    <a data-id="@item.Id" href="@item.NiceUrl"><img src="@item.imatgePrevia.mediaItem[0].Image.umbracoFile" max-height="450" max-widht="700" alt="@item.Name"/></a>
+                </li>
+            }
+        }
+    </ul>
+</div>

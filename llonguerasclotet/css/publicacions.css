@@ -1,0 +1,51 @@
+﻿.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+#publicacions .projecte {
+    clear: both;
+}
+#filters {
+}
+#filters li {
+    float: left;
+    margin-right: 20px;
+}
+#filters li a {
+    color: black;
+    font-size: 11px;
+}
+#publicacions .projecte img {
+
+    overflow: hidden;
+}
+#publicacions .projecte p 
+{
+    position: absolute;
+    bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 280px;
+    color: white;
+}
+#publicacions .projecte span {
+    background: black;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    display: block;
+    height: 100px;
+    position: absolute;
+    width: 300px;
+    bottom: 0px;
+}
+#publicacions .projecte div {
+    display: block;
+    height: 250px;
+    width: 300px;
+    margin-top: 20px;
+    margin-right: 20px;
+}

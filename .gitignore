@@ -1,0 +1,11 @@
+_ReSharper.llonguerasclotet/
+llonguerasclotet/App_Data/
+llonguerasclotet/install/
+llonguerasclotet/App_Browsers/
+llonguerasclotet/data/
+llonguerasclotet/default.aspx
+llonguerasclotet/media/
+llonguerasclotet/umbraco_client/
+llonguerasclotet/umbraco/
+llonguerasclotet/obj/
+llonguerasclotet/Properties/AssemblyInfo.cs
