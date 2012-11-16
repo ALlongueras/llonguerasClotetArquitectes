@@ -12,7 +12,8 @@
             <link href="/css/isotope.css" rel="stylesheet" type="text/css" />
             <link href="/css/publicacions.css" rel="stylesheet" type="text/css" />
             <link href="/css/home.css" rel="stylesheet" type="text/css" />
-
+            <link href="/css/nivo-slider/nivo-slider.css" rel="stylesheet" type="text/css" />
+            <link href="/css/nivo-slider/themes/default/default.css" rel="stylesheet" type="text/css" />
             <!--Javascript -->
             <script src="/scripts/jquery/jquery-1.7.2.min.js" type="text/javascript"> </script> 
     

@@ -49,6 +49,7 @@ body li { font-family: Numans; }
 }
 #central .menu,#central .menuProjectes {
     clear: both;
+	padding-top: 1px;
 }
 #central .menu h2{
     /*font-family: Numans, Verdana, serif;*/
