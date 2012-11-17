@@ -6,6 +6,15 @@
   pointer-events: none;
   z-index: 1;
 }
+#loader 
+{
+    display: block;
+    clear: both;
+    position: relative;
+    left: 0px;
+    top: 200px;
+    margin: auto;
+}
 #publicacions .projecte {
     clear: both;
 }

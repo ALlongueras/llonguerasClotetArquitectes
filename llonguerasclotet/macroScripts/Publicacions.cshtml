@@ -1,25 +1,24 @@
 ﻿@using umbraco
 @using umbraco.MacroEngines;
-
 <script src="/scripts/jquery/jquery.isotope.js" type="text/javascript"></script>
 <script src="/scripts/publicacions.js" type="text/javascript"></script>
-
 <script src="/scripts/fancybox/jquery.fancybox.pack.js" type="text/javascript"> </script>
 <script src="/scripts/fancybox/jquery.fancybox.js" type="text/javascript"></script>
 <script src="/scripts/fancybox/helpers/jquery.fancybox-media.js" type="text/javascript"> </script>
 <script src="/scripts/fancybox/helpers/jquery.fancybox-thumbs.js" type="text/javascript"> </script>
-
 <link href="/css/fancybox/jquery.fancybox-thumbs.css" rel="stylesheet" type="text/css" />
 <link href="/css/fancybox/jquery.fancybox-buttons.css" rel="stylesheet" type="text/css" />
 <link href="/css/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
-
 <div class="cos_central" id="publicacions">
     @{
         <ul id="filters">
             <li><a href="#" data-filter=".publicacio">@Dictionary.publicacions.ToUpper()</a></li>
             <li><a href="#" data-filter=".premi">@Dictionary.premis.ToUpper()</a></li>
         </ul>
+        
         <div class="projecte">
+        <img src="/img/loading/ajax-loader.gif" id="loader" />
+            
             @{
                 for (int i = 0; i < 2; i++)
                 {
@@ -30,9 +29,8 @@
                             <div class="publicacionsPremis @(i == 0 ? "publicacio" : "premi") hide">
                                 <a href="@item.imatge.mediaItem[0].Image.umbracoFile" title="@item.descripcio">
                                     <img src="@item.imatge.mediaItem[0].Image.umbracoFile" height="250" width="300" alt="@item.Name @Dictionary.keywords"/>
-                                </a>
-                                <span></span>
-                                <p>@item.descripcio</p>    
+                                </a><span></span>
+                                <p>@item.descripcio</p>
                             </div>   
                         }
                     }
