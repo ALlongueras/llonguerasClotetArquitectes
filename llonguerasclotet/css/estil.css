@@ -43,222 +43,230 @@ body li { font-family: Numans; }
     top: 0px;
 }
 
+@-moz-document url-prefix() {
+    .idioma li, .menu li, .menuProjectes li {
+        margin-top: -7px;
+    }
+}
 .idioma li, .menu li, .menuProjectes li {
     float: right;
     margin-right: 10px;
-}
-#central .menu,#central .menuProjectes {
-    clear: both;
-	padding-top: 1px;
-}
-#central .menu h2{
-    /*font-family: Numans, Verdana, serif;*/
-    font-size: 11px;
-    position: relative;
-    right: -10px;
-    top: 11px;
-    top: 0px\9;
-    font-weight: normal;
-    -webkit-margin-before: 0em;
-}
+    margin-top: -7px\9;
+    
+        }
+        #central .menu,#central .menuProjectes {
+            clear: both;
+            padding-top: 1px;
+            display: block;
+        }
+        #central .menu h2{
+            font-size: 11px;
+            position: relative;
+            right: -10px;
+            top: 11px;
+            top: 4px\9;
+            font-weight: normal;
+            -webkit-margin-before: 0em;
+        }
 
-#central .menuProjectes h3 {
-    float: right;
-    /*font-family: Verdana, serif;*/
-    font-size: 10px;
-    position: relative;
-    right: -10px;
-    top: 17px;
-    top: 4px\9;
-    font-weight: normal;
-    -webkit-margin-before: 0em;
-}
+        #central .menuProjectes h3{
+            font-size: 10px;
+            position: relative;
+            right: -10px;
+            top: 17px;
+            
+            top: 15px\9;
+            *top: 0px;
+            font-weight: normal;
+            -webkit-margin-before: 0em;
+        }
 
-li { list-style: none; }
+        li { list-style: none; }
 
-ul {
-    padding: 0px;
-    padding: 0px\9;
-}
+        ul {
+            padding: 0px;
+            padding: 0px\9;
+        }
 
-.linea {
-    clear: both;
-    height: 2px;
-    position: relative;
-    top: -24px\9;
-    top: 4px;
-}
+        .linea {
+            clear: both;
+            height: 2px;
+            height: 4px\9;
+            position: relative;
+            top: 34px\9;
+            top: 4px;
+        }
 
-.linea img {
-    padding: 0px;
-    padding: 0px\9;
-}
+        .linea img {
+            padding: 0px;
+            padding: 0px\9;
+        }
 
-.imatge {
-    position: relative;
-    top: 0px;
-    width: 960px;
-}
+        .imatge {
+            position: relative;
+            top: 0px;
+            width: 960px;
+        }
 
-.idioma a.seleccionat {
-    color: black;
-    /*font-weight: bold;*/
-}
+        .idioma a.seleccionat {
+            color: black;
+            /*font-weight: bold;*/
+        }
 
-li a.seleccionat { color: midnightblue; }
+        li a.seleccionat { color: midnightblue; }
 
-.missatge {
-    color: red;
-    font-size: 15px;
-    position: relative;
-    top: 0px;
-}
+        .missatge {
+            color: red;
+            font-size: 15px;
+            position: relative;
+            top: 0px;
+        }
 
-div#inferior { height: 500px; }
+        div#inferior { height: 500px; }
 
-a:link { text-decoration: none; }
+        a:link { text-decoration: none; }
 
-a:visited { text-decoration: none; }
+        a:visited { text-decoration: none; }
 
-a:hover {
-    border: none;
-    color: gray!important;
-    /*font-weight: bold;*/
-}
+        a:hover {
+            border: none;
+            color: gray!important;
+            /*font-weight: bold;*/
+        }
 
-a:link img {
-    border: none;
-    color: white;
-}
+        a:link img {
+            border: none;
+            color: white;
+        }
 
-a:visited img { border: none; }
+        a:visited img { border: none; }
 
-a:hover img { color: white; }
+        a:hover img { color: white; }
 
 /* Estils publicacions*/
 
-#central .projecte {
-    color: gray;
-    display: block;
-    /*font-family: Verdana, serif;*/
-    font-size: 13px;
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    position: absolute;
-    width: 960px;
-}
+        #central .projecte {
+            color: gray;
+            display: block;
+            /*font-family: Verdana, serif;*/
+            font-size: 13px;
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            width: 960px;
+        }
 
-#central .projecte li.esquerra {
-    float: left;
-    height: auto;
-    margin-bottom: 30px;
-    width: 450px;
-}
+        #central .projecte li.esquerra {
+            float: left;
+            height: auto;
+            margin-bottom: 30px;
+            width: 450px;
+        }
 
-#central .projecte li.dreta {
-    float: left;
-    height: auto;
-    margin-bottom: 30px;
-    margin-left: 60px;
-    width: 450px;
-}
+        #central .projecte li.dreta {
+            float: left;
+            height: auto;
+            margin-bottom: 30px;
+            margin-left: 60px;
+            width: 450px;
+        }
 
-#central .projecte li img {
-    margin-top: 15px;
-    max-height: 200px;
-    max-width: 450px;
-}
+        #central .projecte li img {
+            margin-top: 15px;
+            max-height: 200px;
+            max-width: 450px;
+        }
 
-.esquerra img, .dreta img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .esquerra img, .dreta img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-.expo {
-    color: gray;
-    float: left;
-    /*font-family: Verdana, serif;*/
-    font-size: 13px;
-    height: auto;
-    margin-bottom: 50px;
-    margin-left: 0px;
-    margin-right: 90px;
-    position: relative;
-    text-align: justify;
-    width: 450px;
-}
+        .expo {
+            color: gray;
+            float: left;
+            /*font-family: Verdana, serif;*/
+            font-size: 13px;
+            height: auto;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            margin-right: 90px;
+            position: relative;
+            text-align: justify;
+            width: 450px;
+        }
 
-.premis {
-    color: gray;
-    float: right;
-    /*font-family: Verdana, serif;*/
-    font-size: 13px;
-    height: auto;
-    margin-bottom: 50px;
-    position: relative;
-    text-align: justify;
-    width: 450px;
-}
+        .premis {
+            color: gray;
+            float: right;
+            /*font-family: Verdana, serif;*/
+            font-size: 13px;
+            height: auto;
+            margin-bottom: 50px;
+            position: relative;
+            text-align: justify;
+            width: 450px;
+        }
 
-.fotos {
-    margin-top: 30px;
-    text-align: center;
-}
+        .fotos {
+            margin-top: 30px;
+            text-align: center;
+        }
 
 /* Estils Estudi */
 
-#estudi, #publicacions { margin-top: 20px; }
+        #estudi, #publicacions { margin-top: 20px; }
 
-#central .curriculum {
-    height: 300px;
-    overflow-y: auto;
-    position: relative;
-    top: 20px;
-    width: 960px;
-}
+        #central .curriculum {
+            height: 300px;
+            overflow-y: auto;
+            position: relative;
+            top: 20px;
+            width: 960px;
+        }
 
-#central .imatge_estudi {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-height: 350px;
-    max-width: 960px;
-    position: relative;
-}
+        #central .imatge_estudi {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-height: 350px;
+            max-width: 960px;
+            position: relative;
+        }
 
-#central .columna {
-    float: left;
-    /*font-family: Verdana;*/
-    font-size: 13px;
-    position: relative;
-    text-align: justify;
-    width: 310px;
-}
+        #central .columna {
+            float: left;
+            /*font-family: Verdana;*/
+            font-size: 13px;
+            position: relative;
+            text-align: justify;
+            width: 310px;
+        }
 
-#central .columna2 {
-    float: left;
-    /*font-family: Verdana;*/
-    font-size: 13px;
-    left: 15px;
-    position: relative;
-    text-align: justify;
-    width: 309px;
-}
+        #central .columna2 {
+            float: left;
+            /*font-family: Verdana;*/
+            font-size: 13px;
+            left: 15px;
+            position: relative;
+            text-align: justify;
+            width: 309px;
+        }
 
-#central .columna3 {
-    float: left;
-    /*font-family: Verdana;*/
-    font-size: 13px;
-    left: 32px;
-    position: relative;
-    text-align: justify;
-    width: 309px;
-}  
-
-
+        #central .columna3 {
+            float: left;
+            /*font-family: Verdana;*/
+            font-size: 13px;
+            left: 32px;
+            position: relative;
+            text-align: justify;
+            width: 309px;
+        }  
 
 
 
-/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+
+
+    /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
