@@ -12,3 +12,10 @@
 #slideshow h2 {
     float: right;
 }
+.slider-wrapper { 
+	width: 100%; 
+	margin: 0px auto;
+}
+.nivo-html-caption {
+    display:none;
+}
