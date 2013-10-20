@@ -3,8 +3,8 @@
   text-align: left;
   width: 1000px;
   height: 95px;
-  top: 5px;
-    margin-bottom: 10px;
+  top: 2px;
+  margin-bottom: 8px;
 }
 #menuProjectes .petites
 {
@@ -98,10 +98,10 @@
     height: 50px;
 }
 .descripcioProjecte{
-  position: relative;
-  width: 230px;
+  position: absolute;
+  width: 235px;
   height: 475px;
-  top: 15px;
+  bottom: -20px;
   margin-top: 15px;
   margin-left: 10px;
   font-family: Source_Sans_Pro;
@@ -110,7 +110,6 @@
   text-align: justify;
 }
 .descripcioProjecte .genericDescription {
-    overflow-y: auto;
     height: 247px;
     padding-right: 3px;
 }
@@ -120,13 +119,18 @@
     font-size: 13px;
 }
 .descripcioProjecte h2 {
-    font-size: 13px;
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 .descripcioProjecte h3 {
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
 .descripcioProjecte h4, .descripcioProjecte h5{
-    font-size: 13px;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: normal;
 }
 .descripcioProjecte p, .descripcioProjecte h1, .descripcioProjecte h2, .descripcioProjecte h3, .descripcioProjecte h4, .descripcioProjecte h5 {
     margin-top: 0px;

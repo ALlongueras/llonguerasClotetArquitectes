@@ -1588,16 +1588,15 @@
     <Content Include="umbraco_client\ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
     <Content Include="umbraco_client\ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
     <Content Include="umbraco_client\ui\ui-lightness\jquery-ui-1.8.4.custom.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Browsers\Form.browser" />
@@ -1710,6 +1709,7 @@
     <Folder Include="install\steps\Definitions\" />
     <Folder Include="media\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Properties\" />
     <Folder Include="umbraco\ActionHandlers\" />
     <Folder Include="umbraco\cache\" />
     <Folder Include="umbraco\LiveEditing\Menu\" />

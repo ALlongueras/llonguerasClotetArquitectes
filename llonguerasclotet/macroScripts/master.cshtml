@@ -1,7 +1,7 @@
 ﻿@using umbraco.MacroEngines
 @{
     dynamic posicio = @CurrentModel.AncestorOrSelf("master");
-    DynamicNode tematica = @CurrentModel.AncestorOrSelf("home");
+    DynamicNode idiomaNode = @CurrentModel.AncestorOrSelf("home");
 }
 @{
     if (CurrentModel.NodeTypeAlias == "master")
@@ -14,7 +14,7 @@
 <div id="central">
     <div class="header">
         <div class="logo">
-            <a href="@tematica.Url" >
+            <a href="@idiomaNode.Url" >
                 <img src="@posicio.logo.mediaItem[0].Image.umbracoFile" alt="Llongueras Clotet @Dictionary.keywords" />
             </a>
         </div>
@@ -40,11 +40,11 @@
         </ul>
 
         <ul class="menu">
-            @foreach (dynamic item in @tematica.Descendants(2).Items.Take(2))
+            @foreach (dynamic item in @idiomaNode.Descendants(2).Items.Take(2))
             {
                 string name = @item.NodeTypeAlias()=="estudi" ? @Dictionary.estudi : @Dictionary.publicacionsPremis;
                 <li>
-                    <a class="@(item.Id==Model.Id?"seleccionat":"")" href="@item.Url">
+                    <a class="@(item.Id==CurrentModel.Id?"seleccionat":"")" href="@item.Url">
                         <h2>@name.ToUpper()</h2>
                     </a>
                 </li>
@@ -53,17 +53,24 @@
 
         <ul class="menuProjectes">
             <h2 class="hide">@Dictionary.projectes</h2>
-            @foreach (dynamic item in @tematica.Descendants("tematica").Items.OrderByDescending(x => x.SortOrder))
+            @foreach (DynamicNode item in @idiomaNode.Descendants("tematica").Items.Take(1))
             {
-                if (string.Compare(@item.NodeTypeAlias, "Tematica") != 0 && !item.notItemMenu)
+                if (string.Compare(@item.NodeTypeAlias, "tematica") == 0)
                 {
-                    foreach (dynamic node in @item.Descendants("Projectes").Take(1))
+                    foreach (DynamicNode tematica in @item.Descendants("tematica").Items.OrderByDescending(x=>x.SortOrder))
                     {
-                        <li>
-                            <a class="@(node.Id==Model.Id?"seleccionat":"")" href="@node.Url">
-                                <h3>@item.Name.ToUpper()</h3>
-                            </a>
-                        </li>
+                        if (tematica.Descendants("Projectes") != null)
+                        {
+                            <li>
+                                @{
+                            DynamicNode projecte = CurrentModel.AncestorOrSelf("tematica") ?? CurrentModel;
+                                }
+                                <a class="@(string.Compare(projecte.Url,tematica.Url)==0?"seleccionat":"")" href="@tematica.Descendants("Projectes").Items.FirstOrDefault().Url">
+                                    <h3>@tematica.Name.ToUpper()</h3>
+                                </a>
+                            </li>
+                        }
+                        
                     }
                 }
             }

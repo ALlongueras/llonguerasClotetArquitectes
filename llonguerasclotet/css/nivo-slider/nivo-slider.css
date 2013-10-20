@@ -14,6 +14,16 @@
 	height:auto;
 	overflow: hidden;
 }
+
+#imatgesProjectes .nivoSlider {
+	position:relative;
+	max-height: 450px;
+    max-width: 700px;
+    left: 250px;
+    top: 33px;
+	overflow: hidden;
+}
+
 .nivoSlider img {
 	position:absolute;
 	top:0px;

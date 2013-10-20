@@ -16,6 +16,12 @@
 	width: 100%; 
 	margin: 0px auto;
 }
+#imatgesProjectes .slider-wrapper { 
+	width: 100%; 
+	margin: 0px auto;
+    position: absolute;
+    bottom: 10px;
+}
 .nivo-html-caption {
     display:none;
 }

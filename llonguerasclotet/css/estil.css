@@ -20,11 +20,11 @@ body li { font-family: Numans; }
     width: 960px;
 }
 
-.idioma a { color: gray; }
+.idioma a { color: #848484; }
 
 .hide { display: none !important; }
 
-.menu li a, .menuProjectes li a { color: black; }
+.menu li a, .menuProjectes li a { color: #848484; }
 
 .header { height: 100px; }
 
@@ -53,10 +53,10 @@ body li { font-family: Numans; }
 }
 #central .menu h2{
     /*font-family: Numans, Verdana, serif;*/
-    font-size: 11px;
+    font-size: 10px;
     position: relative;
     right: -10px;
-    top: 11px;
+    top: 9px;
     top: 0px\9;
     font-weight: normal;
     -webkit-margin-before: 0em;
@@ -68,10 +68,13 @@ body li { font-family: Numans; }
     font-size: 10px;
     position: relative;
     right: -10px;
-    top: 17px;
+    top: 18px;
     top: 4px\9;
     font-weight: normal;
     -webkit-margin-before: 0em;
+}
+#central .menuProjectes a.seleccionat h3 {
+    
 }
 
 li { list-style: none; }
@@ -105,7 +108,14 @@ ul {
     /*font-weight: bold;*/
 }
 
-li a.seleccionat { color: midnightblue; }
+li a.seleccionat {
+    color: black;
+    font-size: 11px;
+}
+
+#menuProjectes li a.seleccionat {
+    font-size: 11px;
+}
 
 .missatge {
     color: red;
@@ -122,7 +132,7 @@ a:visited { text-decoration: none; }
 
 a:hover {
     border: none;
-    color: gray!important;
+    color: #848484;
     /*font-weight: bold;*/
 }
 
@@ -217,6 +227,7 @@ a:hover img { color: white; }
     position: relative;
     top: 20px;
     width: 960px;
+    font-family: Source_Sans_Pro;
 }
 
 #central .imatge_estudi {
