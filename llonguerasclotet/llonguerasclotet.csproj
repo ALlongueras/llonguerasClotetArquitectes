@@ -1618,7 +1618,6 @@
     <Content Include="config\umbracoSettings.config" />
     <Content Include="config\UrlRewriting.config" />
     <Content Include="config\xsltExtensions.config" />
-    <None Include="css\gallery.css.exclude" />
     <None Include="data\vistadb\_placeholder" />
     <Content Include="masterpages\base.master" />
     <Content Include="masterpages\customErrors.master" />
