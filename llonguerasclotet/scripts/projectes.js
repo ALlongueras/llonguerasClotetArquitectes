@@ -30,6 +30,7 @@
             //boxRows: 4,
             animSpeed: 0,
             pauseTime: 3000,
+        adaptImages: true,
             //startSlide: 0,
             directionNav: true,
             controlNav: true,
